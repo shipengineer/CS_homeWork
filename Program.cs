@@ -79,12 +79,11 @@ a = -9 b = -3 -> max = -3
 
 Console.Write("Введите число для обработки  = ");
 int N = Convert.ToInt32(Console.ReadLine());
-int i = 2;
-Console.Write("1, ");
+int i = 0;
 while(i <= N)
 {
 
 Console.Write(i + ", ");
 i+= 2;
 }
-Console.Write(N);
+
