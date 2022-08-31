@@ -60,17 +60,31 @@ a = -9 b = -3 -> max = -3
 -3 -> нет
 7 -> нет
 */
-Console.Write("Введите число на проверку чёт/ нечет = ");
-int num4 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите число на проверку чёт/ нечет = ");
+// int num4 = Convert.ToInt32(Console.ReadLine());
 
-if (num4%2 == 0)
+// if (num4%2 == 0)
+// {
+// Console.Write($"Число {num4} четное");
+// } else {
+// Console.Write($"Число {num4} Нечетное");
+// }
+
+/*
+Задача 8: Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
+
+5 -> 2, 4
+8 -> 2, 4, 6, 8
+*/
+
+Console.Write("Введите число для обработки  = ");
+int N = Convert.ToInt32(Console.ReadLine());
+int i = 2;
+Console.Write("1, ");
+while(i <= N)
 {
-Console.Write($"Число {num4} четное");
-} else {
-Console.Write($"Число {num4} Нечетное");
+
+Console.Write(i + ", ");
+i+= 2;
 }
-
-// Задача 8: Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
-
-// 5 -> 2, 4
-// 8 -> 2, 4, 6, 8
+Console.Write(N);
