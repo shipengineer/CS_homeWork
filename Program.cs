@@ -31,34 +31,44 @@ a = -9 b = -3 -> max = -3
 44 5 78 -> 78
 22 3 9 -> 22
 */
-try{
-Console.Write("Введите первое число = ");
-int num1 = Convert.ToInt32(Console.ReadLine());
-    Console.Write("Введите второе число = ");
-    int num2 = Convert.ToInt32(Console.ReadLine());
-        Console.Write("Введите третье число = ");
-        int num3 = Convert.ToInt32(Console.ReadLine());
-int max = num1;
+// try{
+// Console.Write("Введите первое число = ");
+// int num1 = Convert.ToInt32(Console.ReadLine());
+//     Console.Write("Введите второе число = ");
+//     int num2 = Convert.ToInt32(Console.ReadLine());
+//         Console.Write("Введите третье число = ");
+//         int num3 = Convert.ToInt32(Console.ReadLine());
+// int max = num1;
 
-if (num2>max)
+// if (num2>max)
+// {
+//     max = num2;
+// } else if (num3>max){
+//     max = num3;
+// } 
+// Console.WriteLine(num1 +", "+ num2 +", "+ num3 +" -> "+max);
+// } catch {
+//     Console.WriteLine("Вводите, пожалуйста, целые числа");
+// }
+
+
+
+/*
+Задача 6: Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).
+
+4 -> да
+-3 -> нет
+7 -> нет
+*/
+Console.Write("Введите число на проверку чёт/ нечет = ");
+int num4 = Convert.ToInt32(Console.ReadLine());
+
+if (num4%2 == 0)
 {
-    max = num2;
-} else if (num3>max){
-    max = num3;
-} 
-Console.WriteLine(num1 +", "+ num2 +", "+ num3 +" -> "+max);
-} catch {
-    Console.WriteLine("Вводите, пожалуйста, целые числа");
+Console.Write($"Число {num4} четное");
+} else {
+Console.Write($"Число {num4} Нечетное");
 }
-
-
-
-
-// Задача 6: Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).
-
-// 4 -> да
-// -3 -> нет
-// 7 -> нет
 
 // Задача 8: Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
 
