@@ -9,9 +9,9 @@ a = -9 b = -3 -> max = -3
 */
 // try {
 // Console.WriteLine("Введите число а = ");
-// int a = Convert.ToInt32(Console.ReadLine());
+// long a = Convert.ToInt32(Console.ReadLine());
 // Console.WriteLine("Введите число b = ");
-// int b = Convert.ToInt32(Console.ReadLine());
+// long b = Convert.ToInt32(Console.ReadLine());
 
 // if (a>b)
 // {
@@ -39,12 +39,12 @@ a = -9 b = -3 -> max = -3
 
 // try{
 // Console.Write("Введите первое число = ");
-// int num1 = Convert.ToInt32(Console.ReadLine());
+// long num1 = Convert.ToInt32(Console.ReadLine());
 //     Console.Write("Введите второе число = ");
-//     int num2 = Convert.ToInt32(Console.ReadLine());
+//     long num2 = Convert.ToInt32(Console.ReadLine());
 //         Console.Write("Введите третье число = ");
-//         int num3 = Convert.ToInt32(Console.ReadLine());
-// int max = num1;
+//         long num3 = Convert.ToInt32(Console.ReadLine());
+// long max = num1;
 
 // if (num2>max)
 // {
@@ -69,7 +69,7 @@ a = -9 b = -3 -> max = -3
 //[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
 // Console.Write("Введите число на проверку чёт/ нечет = ");
-// int num4 = Convert.ToInt32(Console.ReadLine());
+// long num4 = Convert.ToInt32(Console.ReadLine());
 
 // if (num4%2 == 0)
 // {
@@ -90,8 +90,8 @@ a = -9 b = -3 -> max = -3
 //[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
 // Console.Write("Введите число для обработки  = ");
-// int N = Convert.ToInt32(Console.ReadLine());
-// int i = 0;
+// long N = Convert.ToInt32(Console.ReadLine());
+// long i = 0;
 // while(i <= N)
 // {
 
@@ -109,14 +109,14 @@ a = -9 b = -3 -> max = -3
 
 //[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
-// void scndCount(int num)
+// void scndCount(long num)
 // {
-//     int result = (num % 100 - num % 10) / 10;
+//     long result = (num % 100 - num % 10) / 10;
 //     System.Console.WriteLine(result);
 // }
 
 // Console.Write("Введите число: ");
-// int num = int.Parse(Console.ReadLine());
+// long num = long.Parse(Console.ReadLine());
 
 // scndCount(num);
 //-------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -131,11 +131,11 @@ a = -9 b = -3 -> max = -3
 //[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
 /*
-void thrdCount(int num)
+void thrdCount(long num)
 {
-    int origin = num;
-    int mutable = num;
-    int i = 0;
+    long origin = num;
+    long mutable = num;
+    long i = 0;
     if (num > 99 && num != 0)
     {
         while (mutable > 999)
@@ -143,7 +143,7 @@ void thrdCount(int num)
             mutable = mutable / 10;
             i++;
         }
-        int result = (origin / Convert.ToInt32(Math.Pow(10, i))) % 10;
+        long result = (origin / Convert.ToInt32(Math.Pow(10, i))) % 10;
         System.Console.WriteLine("________________________________________________________________________________________________________________");
         System.Console.WriteLine($"Третья цифра числа {origin} это {result}\n");
     }
@@ -151,7 +151,7 @@ void thrdCount(int num)
     {
         System.Console.WriteLine("________________________________________________________________________________________________________________");
         System.Console.WriteLine("Ну тут варианта два: \n");
-        System.Console.WriteLine("1. Ты либо ввел чсило больше чем может принять 32 разрядный int, а это <<От -2 147 483 648 до 2 147 483 647>>");
+        System.Console.WriteLine("1. Ты либо ввел чсило больше чем может принять 32 разрядный long, а это <<От -2 147 483 648 до 2 147 483 647>>");
         System.Console.WriteLine("2. Ты вообще ввел не число, хулиган ('v') \n");
     }
     else
@@ -163,7 +163,7 @@ void thrdCount(int num)
 }
 
 Console.Write("Введите число: ");
-int.TryParse(Console.ReadLine(), out int num);
+long.TryParse(Console.ReadLine(), out long num);
 
 thrdCount(num);
 */
@@ -177,7 +177,8 @@ thrdCount(num);
 1 -> нет
 */
 //[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
-void weekEnd(int num)
+/*
+void weekEnd(long num)
 {
     if (0 < num && num <= 7)
     {
@@ -195,6 +196,56 @@ void weekEnd(int num)
     }
 }
 Console.Write("Введите цифру дня недели: ");
-int.TryParse(Console.ReadLine(), out int num);
+long.TryParse(Console.ReadLine(), out long num);
 weekEnd(num);
+*/
 //-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+/*Задача 11 HARD - необязательная: Напишите программу, которая принимает на вход целое число любой разрядности число и удаляет вторую цифру слева направо этого
+числа.*/
+
+//[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+void thrdCount(long num)
+{
+    long origin = num;
+    long mutable = num;
+    long i = 0;
+    switch (num)
+    {
+        case num > 99 && num != 0:
+        default:
+    }
+    if (num > 99 && num != 0)
+    {
+        while (mutable > 99)
+        {
+            mutable = mutable / 10;
+            i++;
+        }
+
+        long result = (origin - origin % Convert.ToInt64(Math.Pow(10, i + 1))) / 10 + origin % Convert.ToInt64(Math.Pow(10, i));
+        System.Console.WriteLine($"Было:  {origin}");
+        System.Console.WriteLine($"Стало: {result}");
+    }
+    else if (num == 0)
+    {
+        System.Console.WriteLine("________________________________________________________________________________________________________________");
+        System.Console.WriteLine("Ну тут варианта три: \n");
+        System.Console.WriteLine("1. Ты либо ввел чсило больше чем может принять 64 разрядный long, а это <<От -9 223 372 036 854 775 808 до 9 223 372 036 854 775 807>>");
+        System.Console.WriteLine("2. Ты вообще ввел не число, хулиган ('v') ");
+        System.Console.WriteLine("3. Ты ввел число \"0\"\n");
+
+    }
+    else
+    {
+        System.Console.WriteLine("________________________________________________________________________________________________________________");
+        System.Console.WriteLine("У числа нет второй цифры, но ты об этом и сам знаешь");
+    }
+}
+
+Console.Write("Введите число: ");
+Int64.TryParse(Console.ReadLine(), out long num);
+
+// Предельное число long  типа 9223372036854775807
+thrdCount(num);
+
