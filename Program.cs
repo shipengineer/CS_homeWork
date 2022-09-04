@@ -77,13 +77,30 @@ a = -9 b = -3 -> max = -3
 8 -> 2, 4, 6, 8
 */
 
-Console.Write("Введите число для обработки  = ");
-int N = Convert.ToInt32(Console.ReadLine());
-int i = 0;
-while(i <= N)
-{
+// Console.Write("Введите число для обработки  = ");
+// int N = Convert.ToInt32(Console.ReadLine());
+// int i = 0;
+// while(i <= N)
+// {
 
-Console.Write(i + ", ");
-i+= 2;
+// Console.Write(i + ", ");
+// i+= 2;
+// }
+
+/*Задача 10: Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
+
+456 -> 5
+782 -> 8
+918 -> 1*/
+
+void scndCount(int num)
+{
+    int result = (num % 100 - num % 10) / 10;
+    System.Console.WriteLine(result);
 }
+
+Console.Write("Введите число: ");
+int num = int.Parse(Console.ReadLine());
+
+scndCount(num);
 
