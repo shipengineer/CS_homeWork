@@ -205,40 +205,27 @@ weekEnd(num);
 числа.*/
 
 //[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+
+
 void thrdCount(long num)
 {
-    if (num > 99 && num != 0)
-    {
-        while (mutable > 99)
-        {
-            mutable = mutable / 10;
-            i++;
-        }
 
-        long result = (origin - origin % Convert.ToInt64(Math.Pow(10, i + 1))) / 10 + origin % Convert.ToInt64(Math.Pow(10, i));
-        System.Console.WriteLine($"Было:  {origin}");
-        System.Console.WriteLine($"Стало: {result}");
-    }
-    else if (num == 0)
-    {
-        System.Console.WriteLine("________________________________________________________________________________________________________________");
-        System.Console.WriteLine("Ну тут варианта три: \n");
-        System.Console.WriteLine("1. Ты либо ввел чсило больше чем может принять 64 разрядный long, а это <<От -9 223 372 036 854 775 808 до 9 223 372 036 854 775 807>>");
-        System.Console.WriteLine("2. Ты вообще ввел не число, хулиган ('v') ");
-        System.Console.WriteLine("3. Ты ввел число \"0\"\n");
+    long mutable = num;
+    long origin = num;
 
-    }
-    else
+    if (num > 0)
     {
-        System.Console.WriteLine("________________________________________________________________________________________________________________");
-        System.Console.WriteLine("У числа нет второй цифры, но ты об этом и сам знаешь");
+        positiveSolution(num, mutable, origin);
     }
+    else negativeSolution(num, mutable, origin);
+
 
 }
-void positiveSolution(long num)
+void positiveSolution(long num, long mutable, long origin)
 {
     if (num > 99 && num != 0)
     {
+        int i = 0;
         while (mutable > 99)
         {
             mutable = mutable / 10;
@@ -265,17 +252,19 @@ void positiveSolution(long num)
     }
 
 }
-void negativeSolution(long num)
+void negativeSolution(long num, long mutable, long origin)
 {
     if (num < -99 && num != 0)
     {
+        int i = 0;
         while (mutable < -99)
         {
             mutable = mutable / 10;
             i++;
         }
 
-        long result = (origin + origin % Convert.ToInt64(Math.Pow(10, i + 1))) / 10 - origin % Convert.ToInt64(Math.Pow(10, i));
+        long result = (origin - origin % Convert.ToInt64(Math.Pow(10, i + 1))) / 10 + origin % Convert.ToInt64(Math.Pow(10, i));
+        System.Console.WriteLine(origin - origin % Convert.ToInt64(Math.Pow(10, i + 1)));
         System.Console.WriteLine($"Было:  {origin}");
         System.Console.WriteLine($"Стало: {result}");
     }
@@ -296,10 +285,7 @@ void negativeSolution(long num)
 
 }
 
-Console.Write("Введите число: ");
-Int64.TryParse(Console.ReadLine(), out long num);
-Console.Write("Введите число: ");
-Int64.TryParse(Console.ReadLine(), out long num);
+
 Console.Write("Введите число: ");
 Int64.TryParse(Console.ReadLine(), out long num);
 
