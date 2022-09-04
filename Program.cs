@@ -207,14 +207,6 @@ weekEnd(num);
 //[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 void thrdCount(long num)
 {
-    long origin = num;
-    long mutable = num;
-    long i = 0;
-    switch (num)
-    {
-        case num > 99 && num != 0:
-        default:
-    }
     if (num > 99 && num != 0)
     {
         while (mutable > 99)
@@ -241,8 +233,73 @@ void thrdCount(long num)
         System.Console.WriteLine("________________________________________________________________________________________________________________");
         System.Console.WriteLine("У числа нет второй цифры, но ты об этом и сам знаешь");
     }
+
+}
+void positiveSolution(long num)
+{
+    if (num > 99 && num != 0)
+    {
+        while (mutable > 99)
+        {
+            mutable = mutable / 10;
+            i++;
+        }
+
+        long result = (origin - origin % Convert.ToInt64(Math.Pow(10, i + 1))) / 10 + origin % Convert.ToInt64(Math.Pow(10, i));
+        System.Console.WriteLine($"Было:  {origin}");
+        System.Console.WriteLine($"Стало: {result}");
+    }
+    else if (num == 0)
+    {
+        System.Console.WriteLine("________________________________________________________________________________________________________________");
+        System.Console.WriteLine("Ну тут варианта три: \n");
+        System.Console.WriteLine("1. Ты либо ввел чсило больше чем может принять 64 разрядный long, а это <<От -9 223 372 036 854 775 808 до 9 223 372 036 854 775 807>>");
+        System.Console.WriteLine("2. Ты вообще ввел не число, хулиган ('v') ");
+        System.Console.WriteLine("3. Ты ввел число \"0\"\n");
+
+    }
+    else
+    {
+        System.Console.WriteLine("________________________________________________________________________________________________________________");
+        System.Console.WriteLine("У числа нет второй цифры, но ты об этом и сам знаешь");
+    }
+
+}
+void negativeSolution(long num)
+{
+    if (num < -99 && num != 0)
+    {
+        while (mutable < -99)
+        {
+            mutable = mutable / 10;
+            i++;
+        }
+
+        long result = (origin + origin % Convert.ToInt64(Math.Pow(10, i + 1))) / 10 - origin % Convert.ToInt64(Math.Pow(10, i));
+        System.Console.WriteLine($"Было:  {origin}");
+        System.Console.WriteLine($"Стало: {result}");
+    }
+    else if (num == 0)
+    {
+        System.Console.WriteLine("________________________________________________________________________________________________________________");
+        System.Console.WriteLine("Ну тут варианта три: \n");
+        System.Console.WriteLine("1. Ты либо ввел чсило больше чем может принять 64 разрядный long, а это <<От -9 223 372 036 854 775 808 до 9 223 372 036 854 775 807>>");
+        System.Console.WriteLine("2. Ты вообще ввел не число, хулиган ('v') ");
+        System.Console.WriteLine("3. Ты ввел число \"0\"\n");
+
+    }
+    else
+    {
+        System.Console.WriteLine("________________________________________________________________________________________________________________");
+        System.Console.WriteLine("У числа нет второй цифры, но ты об этом и сам знаешь");
+    }
+
 }
 
+Console.Write("Введите число: ");
+Int64.TryParse(Console.ReadLine(), out long num);
+Console.Write("Введите число: ");
+Int64.TryParse(Console.ReadLine(), out long num);
 Console.Write("Введите число: ");
 Int64.TryParse(Console.ReadLine(), out long num);
 
